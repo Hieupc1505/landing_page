@@ -1,9 +1,7 @@
 "use client";
 import { Avatar, Box, IconButton, Rating, Typography } from "@mui/material";
-import React, { useRef } from "react";
+import React from "react";
 
-import SpeedDialIcon from "@mui/material/SpeedDialIcon";
-import SpeedDialAction from "@mui/material/SpeedDialAction";
 import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
