@@ -4,17 +4,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-
 import Container from "@mui/material/Container";
-
 import Button from "@mui/material/Button";
-
 import { Stack, styled } from "@mui/material";
 import SegmentIcon from "@mui/icons-material/Segment";
 import LogoIcon from "./logo";
-import Image from "next/image";
 import SettingsIcon from "@mui/icons-material/Settings";
-import theme from "@/app/theme";
 
 function ResponsiveAppBar() {
     const IconButtonStyled = styled(IconButton)(({ theme }) => ({
@@ -38,7 +33,7 @@ function ResponsiveAppBar() {
         },
     }));
 
-    const BoxUl = styled(Box)(({ theme }) => ({
+    const BoxUl = styled(Box)(() => ({
         display: "flex",
         flexDirection: "row",
         gap: "40px",
@@ -84,7 +79,7 @@ function ResponsiveAppBar() {
         padding: "0px",
         textDecoration: "none",
         transition: "200ms cubic-bezier(0.4, 0, 0.2, 1)",
-        color: theme.palette.typography.main,
+        color: theme.palette.typography?.main,
         position: "relative",
         "&:hover::before": {
             display: "block",
@@ -99,7 +94,7 @@ function ResponsiveAppBar() {
             backgroundColor: theme.palette.text.disabled,
         },
         "&.active": {
-            color: theme.palette.primary.main,
+            color: theme.palette.primary?.main,
             display: "inline-flex",
             WebkitBoxAlign: "center",
             alignItems: "center",
@@ -119,7 +114,7 @@ function ResponsiveAppBar() {
             fontSize: "0.875rem",
             lineHeight: 1.57143,
             height: "100%",
-            color: theme.palette.primary.main,
+            color: theme.palette.primary?.main,
             outline: "0px",
             borderWidth: "0px",
             borderStyle: "initial",
@@ -141,7 +136,7 @@ function ResponsiveAppBar() {
             content: '""',
             borderRadius: "50%",
             position: "absolute",
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.primary?.main,
         },
     }));
 
