@@ -1,7 +1,15 @@
-import Header from "@/components/header";
-import Main from "@/layout/main.layout";
-import HomePage from "@/pages/HomePage/index";
-import Minimal from "./minimal/page";
-export default function Home() {
-    return <Minimal />;
+import Header from "@/pages/Minimal/component/header";
+import { Box } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
+import LayoutMinimal from "@/pages/Minimal/layout";
+export default function Minimal() {
+    return (
+        <ThemeProvider theme={theme}>
+            <Box>
+                <Header />
+                <LayoutMinimal />
+            </Box>
+        </ThemeProvider>
+    );
 }

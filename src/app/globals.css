@@ -126,11 +126,8 @@ body {
 
 .box,
 .box2 {
-    width: 150px;
-    height: 150px;
-
     border-radius: var(--r);
-    position: relative;
+
     transform: translate(0);
     transform-style: preserve-3d;
 }

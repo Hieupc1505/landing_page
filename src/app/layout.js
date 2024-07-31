@@ -3,8 +3,6 @@ import "./globals.css";
 
 import "normalize.css";
 
-import Head from "next/head";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,11 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <Head>
+            <head>
                 <link
                     rel="stylesheet"
                     type="text/css"
-                    charset="UTF-8"
+                    charSet="UTF-8"
                     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
                 />
                 <link
@@ -27,8 +25,10 @@ export default function RootLayout({ children }) {
                     type="text/css"
                     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
                 />
-            </Head>
-            <body className={inter.className}>{children}</body>
+            </head>
+            <body className={inter.className} suppressHydrationWarning={true}>
+                {children}
+            </body>
         </html>
     );
 }
