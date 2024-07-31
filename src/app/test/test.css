@@ -1,0 +1,35 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container_page {
+    display: flex;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.panel {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background-color: transparent;
+}
+
+.extra {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.container_page {
+    --bg-start: rgb(244, 246, 248);
+    --bg-end: rgb(244, 246, 248);
+    background-image: linear-gradient(var(--bg-start), var(--bg-end));
+    transition: background 1s ease;
+}
