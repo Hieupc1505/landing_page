@@ -1,6 +1,6 @@
 "use client";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { useLayoutEffect, useRef } from "react";
 import { Avatar, Box, Stack, styled, Typography } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
@@ -19,8 +19,8 @@ export default function Slider2() {
     useLayoutEffect(() => {
         const sections = gsap.utils.toArray(".panel");
         const containerElement = container.current;
-        const totalWidth = sections.length * xlWidth;
-        if (container) {
+
+        if (container && typeof window !== "undefined") {
             let ctx = gsap.context(() => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
