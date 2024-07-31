@@ -1,6 +1,7 @@
 "use client";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+
 import { useLayoutEffect, useRef } from "react";
 import { Box } from "@mui/material";
 import { Translate } from "@mui/icons-material";

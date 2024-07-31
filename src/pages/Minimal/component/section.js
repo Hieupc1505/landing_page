@@ -13,7 +13,6 @@ import React, { useState, useEffect, useRef } from "react";
 import BoltIcon from "@mui/icons-material/Bolt";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
 import BgSvg from "./bg";
 
 const Section = () => {
@@ -45,11 +44,11 @@ const Section = () => {
             // rootMargin: "-147px 0px 0px 0px",
             threshold: Array.from({ length: 101 }, (_, i) => i / 100),
         });
-
-        observer.observe(boxContainerRef?.current);
+        if (boxContainerRef?.current)
+            observer.observe(boxContainerRef?.current);
 
         return () => {
-            observer.unobserve(elementsRef?.current);
+            // observer.unobserve(elementsRef?.current);
             observer.unobserve(boxContainerRef?.current);
         };
     }, []);
